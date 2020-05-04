@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 1090729696}
   - component: {fileID: 1090729695}
   - component: {fileID: 1090729694}
+  - component: {fileID: 1090729697}
   m_Layer: 0
   m_Name: Obstacle (5)
   m_TagString: Untagged
@@ -475,6 +476,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1090729692}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1090729697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090729692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f4abee34013c14b941190306742451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveVector: {x: 0, y: 0, z: 20}
+  movementFactor: 0.229
 --- !u!1 &1138513987
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +501,7 @@ GameObject:
   - component: {fileID: 1138513991}
   - component: {fileID: 1138513990}
   - component: {fileID: 1138513989}
+  - component: {fileID: 1138513992}
   m_Layer: 0
   m_Name: Obstacle (3)
   m_TagString: Untagged
@@ -502,7 +517,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1138513987}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.3, y: 31, z: 0}
+  m_LocalPosition: {x: -7.3, y: 41.3, z: 0}
   m_LocalScale: {x: 6.2078457, y: 20.881105, z: 6.1293645}
   m_Children: []
   m_Father: {fileID: 614614913}
@@ -562,6 +577,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1138513987}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1138513992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138513987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f4abee34013c14b941190306742451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveVector: {x: 20, y: 0, z: 0}
+  movementFactor: 0.174
 --- !u!1001 &1394793460
 Prefab:
   m_ObjectHideFlags: 0
@@ -777,6 +805,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114149421073083996, guid: 71e43c8944af27f479dd55c7d176faa2,
+        type: 2}
+      propertyPath: engine
+      value: 
+      objectReference: {fileID: 8300000, guid: 022482b0abba3f04eb62c7d2ac2f6bf4, type: 3}
+    - target: {fileID: 114149421073083996, guid: 71e43c8944af27f479dd55c7d176faa2,
+        type: 2}
+      propertyPath: success
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dbb9e7885f68604fab5fdd1be7ff9f1, type: 3}
+    - target: {fileID: 114149421073083996, guid: 71e43c8944af27f479dd55c7d176faa2,
+        type: 2}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 8300000, guid: 782f8f72170f0c946b6c79ed254f2f2e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71e43c8944af27f479dd55c7d176faa2, type: 2}
   m_IsPrefabParent: 0
@@ -997,17 +1040,32 @@ Prefab:
     - target: {fileID: 108902421190254834, guid: 79e14f6a37e54b2488f5a91c971d5036,
         type: 2}
       propertyPath: m_Color.r
-      value: 0.9117647
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108902421190254834, guid: 79e14f6a37e54b2488f5a91c971d5036,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.908349
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108902421190254834, guid: 79e14f6a37e54b2488f5a91c971d5036,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.7307526
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108902421190254834, guid: 79e14f6a37e54b2488f5a91c971d5036,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108902421190254834, guid: 79e14f6a37e54b2488f5a91c971d5036,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108902421190254834, guid: 79e14f6a37e54b2488f5a91c971d5036,
+        type: 2}
+      propertyPath: m_Shadows.m_NormalBias
+      value: 0.54
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79e14f6a37e54b2488f5a91c971d5036, type: 2}
