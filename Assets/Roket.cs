@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+//using System.Collections;
+//using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Roket : MonoBehaviour {
     /*the code must work in every frame */
@@ -36,11 +37,19 @@ public class Roket : MonoBehaviour {
         switch (collision.gameObject.tag)
         {
             case "Friendly":
-                //OK
-                print("OK");
+                /*
+                 * print("OK"); 
+                */
+
+                break;
+            case "Finish":
+                SceneManager.LoadScene(1); //incarc Level 2
                 break;
             default:
-                print("Dead"); //player killed
+                /*
+                 * print("Dead"); //player killed
+                 */
+                SceneManager.LoadScene(1);
                 break;
         }
     }
